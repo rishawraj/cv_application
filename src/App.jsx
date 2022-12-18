@@ -2,9 +2,10 @@ import { useRef, useState } from "react";
 import profile from "./assets/profile.jpg";
 import "./App.css";
 
-// todo form
-// todo preview
-// todo
+//* todo form
+//* todo preview
+// todo add 3 sections
+// todo use components for stuff, extract components
 
 function App() {
   const [name, setName] = useState("John Doe");
@@ -82,16 +83,41 @@ function App() {
         </div>
         {/* ================= preview ========================= */}
         <div className="preview">
-          <button className="no-print" onClick={showForm}>
-            edit
-          </button>
+          <hr />
           <h2>{name}</h2>
           <p>{email}</p>
           <p>{phone}</p>
           <img src={image} alt="profile" height="150px" width="auto" />
-          <br />
+          {/* <br /> */}
+          <hr />
+          <h3>Eductaion</h3>
+          <p>school name</p>
+          <p>course</p>
+          <p>college name name</p>
+          <p>course</p>
+          <hr />
+          <h3>Experience</h3>
+          <p>web dev</p>
+          <p>tech:</p>
+          <ul>
+            <li>react</li>
+            <li>js</li>
+            <li>css</li>
+            <li>html</li>
+          </ul>
+
+          <p>stack</p>
+          <ul>
+            <li>MERN</li>
+          </ul>
+
+          <hr />
+
           <button className="no-print" onClick={(e) => print()}>
             print
+          </button>
+          <button className="no-print" onClick={showForm}>
+            edit
           </button>
         </div>
         {/* ================= preview ========================= */}
